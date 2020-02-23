@@ -54,9 +54,9 @@ namespace MVCTareaa
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "1579714892180412",
+               appSecret: "d5ac2eab4c0714651eeee786cb48694a");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
