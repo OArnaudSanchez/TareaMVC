@@ -1,0 +1,65 @@
+﻿@model MVCTareaa.Models.DatosConversiones
+@{
+    ViewBag.Title = "Longitud";
+}
+
+<h2>Longitud</h2>
+
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.Label("Seleccione la Conversion que quiera Realizar") <br>
+        @Html.RadioButtonFor(x => x.Longitud, "Centimetro/Pies")<strong>Centimetro/Kilometros</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Centimetro/Pulgadas")<strong>Centimetro/Pulgadas</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Centimetro/Metros")<strong>Centimetro/Metros</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Centimetro/Kilometros")<strong>Centimetro/Kilometros</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Centimetro/Millas")<strong>Centimetro/Millas</strong><br><br>
+    </div>
+
+    <div>
+        @Html.RadioButtonFor(x => x.Longitud, "Pies/Centimetro")<strong>Pies/Centimetro</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Pies/Pulgadas")<strong>Pies/Pulgadas</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Pies/Metros")<strong>Pies/Metros</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Pies/Kilometros")<strong>Pies/Kilometros</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Pies/Millas")<strong>Pies/Millas</strong><br><br>
+    </div>
+
+    <div>
+        @Html.RadioButtonFor(x => x.Longitud, "Pulgadas/Centimetro")<strong>Pulgadas/Centimetro</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Pulgadas/Pies")<strong>Pulgadas/Pies</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Pulgadas/Metros")<strong>Pulgadas/Metros</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Pulgadas/Kilometros")<strong>Pulgadas/Kilometros</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Pulgadas/Millas")<strong>Pulgadas/Millas</strong><br><br>
+    </div>
+
+    <div>
+        @Html.RadioButtonFor(x => x.Longitud, "Metros/Centimetro")<strong>Metros/Centimetro</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Metros/Pies")<strong>Metros/Pies</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Metros/Pulgadas")<strong>Metros/Pulgadas</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Metros/Kilometros")<strong>Metros/Kilometros</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Metros/Millas")<strong>Metros/Millas</strong><br><br>
+    </div>
+
+    <div>
+        @Html.RadioButtonFor(x => x.Longitud, "Kilometros/Centimetro")<strong>Kilometros/Centimetro</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Kilometros/Pies")<strong>Kilometros/Pies</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Kilometros/Pulgadas")<strong>Kilometros/Pulgadas</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Kilometros/Metros")<strong>Kilometros/Metros</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Kilometros/Millas")<strong>Kilometros/Millas</strong><br><br>
+    </div>
+
+
+    <div>
+        @Html.RadioButtonFor(x => x.Longitud, "Millas/Centimetro")<strong>Millas/Centimetro</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Millas/Pies")<strong>Millas/Pies</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Millas/Pulgadas")<strong>Millas/Pulgadas</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Millas/Metros")<strong>Millas/Metros</strong><br>
+        @Html.RadioButtonFor(x => x.Longitud, "Millas/Kilometros")<strong>Millas/Kilometros</strong><br><br>
+    </div>
+
+
+}
+
+
+
