@@ -168,11 +168,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-<<<<<<< HEAD
     <Compile Include="Controllers\ConversionesController.cs" />
-=======
     <Compile Include="Controllers\FormularioController.cs" />
->>>>>>> 7edfb5ba739c7bcb05633898633b733d608e7e00
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Formulas\Datos.cs" />
@@ -183,11 +180,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-<<<<<<< HEAD
     <Compile Include="Models\DatosConversiones.cs" />
-=======
     <Compile Include="Models\DatosUsuario.cs" />
->>>>>>> 7edfb5ba739c7bcb05633898633b733d608e7e00
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
