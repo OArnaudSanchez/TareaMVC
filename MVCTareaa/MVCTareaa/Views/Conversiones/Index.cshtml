@@ -1,20 +1,27 @@
-﻿
+﻿@model MVCTareaa.Models.DatosConversiones
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index Conversiones</h2>
+<h2>Seleccionar Conversion</h2>
 
-<p>Que desea Convertir</p>
+<p>Que conversion desea Hacer</p>
 
 
-@Html.ActionLink("Longitudes", "Longitud")<br>
+@using (Html.BeginForm("Acceder","Conversiones",FormMethod.Post))
+{
+    @Html.RadioButtonFor(x => x.OpcionConversion, "Longitud")<strong>Longitud</strong><br>
+    @Html.RadioButtonFor(x => x.OpcionConversion, "Temperatura")<strong>Temperatura</strong><br>
+    @Html.RadioButtonFor(x => x.OpcionConversion, "Masa")<strong>Masa</strong><br>
+    @Html.RadioButtonFor(x => x.OpcionConversion, "Datos")<strong>Datos</strong><br>
 
-@Html.ActionLink("Temperaturas", "Temperatura")<br>
 
-@Html.ActionLink("Masa", "Masa")<br>
+    <input type="submit" value="Acceder">
+}
 
-@Html.ActionLink("Datos", "Datos")<br>
+
+
+
 
 
 

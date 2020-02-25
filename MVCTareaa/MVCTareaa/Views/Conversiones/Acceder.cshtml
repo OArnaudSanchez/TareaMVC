@@ -1,0 +1,29 @@
+﻿@model MVCTareaa.Models.DatosConversiones
+@{
+    ViewBag.Title = "Conversiones";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Conversiones</h2>
+
+@{
+    if (Model.OpcionConversion == "Longitud")
+    {
+        @Html.Partial("PartialLongitud");
+    }
+    else if (Model.OpcionConversion == "Temperatura")
+    {
+        @Html.Partial("PartialTemperatura");
+    }
+    else if (Model.OpcionConversion == "Masa")
+    {
+        @Html.Partial("PartialMasa");
+    }
+    else if (Model.OpcionConversion == "Datos")
+    {
+        @Html.Partial("PartialDatos");
+    }
+
+}
+
+
