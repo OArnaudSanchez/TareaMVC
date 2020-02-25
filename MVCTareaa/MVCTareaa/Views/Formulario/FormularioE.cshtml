@@ -16,27 +16,27 @@
     <br />
 
     @Html.LabelFor(a => a.Nombre)
-    @Html.TextBoxFor(z => z.Nombre, new { @class = "form-control", placeholder = "" })
+    @Html.TextBoxFor(z => z.Nombre, new { @class = "form-control", placeholder = "Inserte su nombre" })
     @Html.ValidationMessageFor(x => x.Nombre, null, new { @class = "text-danger" })
     <br />
 
     @Html.LabelFor(a => a.Apellido)
-    @Html.TextBoxFor(z => z.Apellido, new { @class = "form-control", placeholder = "" })
+    @Html.TextBoxFor(z => z.Apellido, new { @class = "form-control", placeholder = "Inserte su apellido" })
     @Html.ValidationMessageFor(x => x.Apellido, null, new { @class = "text-danger" })
     <br />
 
     @Html.LabelFor(a => a.Edad)
-    @Html.TextBoxFor(z => z.Edad, new { @class = "form-control", placeholder = "" })
+    @Html.TextBoxFor(z => z.Edad, new { @class = "form-control", placeholder = "Inserte su edad" })
     @Html.ValidationMessageFor(x => x.Edad, null, new { @class = "text-danger" })
     <br />
 
     @Html.LabelFor(a => a.Telefono)
-    @Html.TextBoxFor(z => z.Telefono, new { @class = "form-control", placeholder = "" })
+    @Html.TextBoxFor(z => z.Telefono, new { @class = "form-control", placeholder = "Inserte su teléfono" })
     @Html.ValidationMessageFor(x => x.Telefono, null, new { @class = "text-danger" })
     <br />
 
     @Html.LabelFor(a => a.Email)
-    @Html.TextBoxFor(z => z.Email, new { @class = "form-control", placeholder = "" })
+    @Html.TextBoxFor(z => z.Email, new { @class = "form-control", placeholder = "Inserte su correo electronico" })
     @Html.ValidationMessageFor(x => x.Email, null, new { @class = "text-danger" })
     <br />
 
@@ -60,7 +60,7 @@
     @Html.TextBoxFor(z => z.curriculum, new { type = "file", accept= "application/pdf", @class = "form-control", placeholder = "Curriculum" })
     @Html.ValidationMessageFor(x => x.curriculum, null, new { @class = "text-danger" })
 
-    <input type="submit" value="ENVIAR" class="btn-success" />
+    <input type="submit" value="ENVIAR" class="btn btn-success" />
 
 }
 
