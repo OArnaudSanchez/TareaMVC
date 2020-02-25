@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVCTareaa.Models;
-using MVCTareaa.Formulas;
 
 namespace MVCTareaa.Controllers
 {
@@ -16,33 +15,45 @@ namespace MVCTareaa.Controllers
             return View();
         }
 
-        public ActionResult Longitud()
+        [HttpPost]
+        public ActionResult Acceder(DatosConversiones datos)
         {
+            return View(datos);
+        }
 
-            return View();
+
+        [HttpPost]
+        public ActionResult Longitud(DatosConversiones datos)
+        {
+            string resultadoLongitud = datos.ConversionLongitudFormaCorta();
+            ViewBag.miResultado = resultadoLongitud;
+            return View(datos);
         }
 
         [HttpPost]
-        public ActionResult Longitud(DatosConversiones datos, Longitudes lon)
+        public ActionResult Temperatura(DatosConversiones datos)
         {
-            var opcion = lon.ConversionLongitudes(datos.Longitud);
+           string resultado = datos.ConversionTemperaturaFormaCorta();
+            ViewBag.miResultado = resultado;
 
-            return View();
+
+            return View(datos);
+        }
+        
+        [HttpPost]
+        public ActionResult Masa(DatosConversiones datos)
+        {
+            string resultado = datos.ConversionMasaFormaCorta();
+            ViewBag.miResultado = resultado;
+            return View(datos);
         }
 
-        public ActionResult Temperatura()
+        [HttpPost]
+        public ActionResult Datos(DatosConversiones datos)
         {
-            return View();
-        }
-
-        public ActionResult Masa()
-        {
-            return View();
-        }
-
-        public ActionResult Datos()
-        {
-            return View();
+            string resultado = datos.ConversionDatosFormaCorta();
+            ViewBag.miResultado = resultado;
+            return View(datos);
         }
 
     }

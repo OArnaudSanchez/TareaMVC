@@ -172,10 +172,6 @@
     <Compile Include="Controllers\FormularioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Formulas\Datos.cs" />
-    <Compile Include="Formulas\Longitudes.cs" />
-    <Compile Include="Formulas\Masa.cs" />
-    <Compile Include="Formulas\Temperatura.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -245,7 +241,18 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Conversiones\Index.cshtml" />
     <Content Include="Views\Conversiones\Longitud.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Formulario\EnvioDatos.cshtml" />
+=======
+    <Content Include="Views\Conversiones\Temperatura.cshtml" />
+    <Content Include="Views\Conversiones\Masa.cshtml" />
+    <Content Include="Views\Conversiones\Datos.cshtml" />
+    <Content Include="Views\Conversiones\PartialTemperatura.cshtml" />
+    <Content Include="Views\Conversiones\Acceder.cshtml" />
+    <Content Include="Views\Conversiones\PartialLongitud.cshtml" />
+    <Content Include="Views\Conversiones\PartialMasa.cshtml" />
+    <Content Include="Views\Conversiones\PartialDatos.cshtml" />
+>>>>>>> 16ebe603fced1041bf2595392ff2f1bd92e33db2
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
