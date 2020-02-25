@@ -9,31 +9,30 @@ namespace MVCTareaa.Models
 {
     public class DatosUsuario
     {
-        [Required(ErrorMessage ="Inserte su Cédula correctamente")]
+        [Required]
         public long Cedula { get; set; }
-        [Required(ErrorMessage = "Inserte su Nombre correctamente")]
+        [Required]
         public string Nombre { get; set; }
-        [Required(ErrorMessage = "Inserte su Apellido correctamente")]
+        [Required]
         public string Apellido { get; set; }
-        [Required(ErrorMessage = "Inserte su Edad correctamente")]
+        [Required]
+        [Range(15,99)]
         public int Edad { get; set; }
-        [Required(ErrorMessage = "Inserte su Telefono correctamente")]
         public long Telefono { get; set; }
         [Display(Name = "Correo electrónico")]
         [RegularExpression(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*",
             ErrorMessage = "Dirección de Correo electrónico incorrecta.")]
         [StringLength(100, ErrorMessage = "Longitud máxima 100")]
         [DataType(DataType.EmailAddress)]
-        [Required(ErrorMessage = "Inserte su Email correctamente")]
         public string Email { get; set; }
-        [Required(ErrorMessage = "Inserte su Genero")]
         public string Genero { get; set; }
-        [Required(ErrorMessage = "Inserte su puesto a aplicar")]
         public string Puesto { get; set; }
         [Display(Name = "Foto")]
-        [Required(ErrorMessage = "Inserte su Foto correctamente")]
+        [Required]
         public HttpPostedFileBase foto { get; set; }
-        public string curriculum { get; set; }
+        [Display(Name = "Currículum")]
+        [Required]
+        public HttpPostedFileBase curriculum { get; set; }
         
     }
 
@@ -45,35 +44,49 @@ namespace MVCTareaa.Models
 
     public enum Puestos
     {
-        [Description("GERENTE DE T.I")]
+        [Display(Name = "GERENTE DE T.I")]
         GerenteTI,
-        [Description("GERENTE DE INFRAESTRUCTURA T.I")]
+
+        [Display(Name = "GERENTE DE INFRAESTRUCTURA T.I")]
         GerenteInfraTI,
-        [Description("GERENTE DE PROYECTOS DE T.I")]
+
+        [Display(Name = "GERENTE DE PROYECTOS DE T.I")]
         GerenteProyecTI,
-        [Description("GERENTE DE DESARROLLO DE T.I")]
+
+        [Display(Name = "GERENTE DE DESARROLLO DE T.I")]
         GerenteDevTI,
-        [Description("GERENTE DE SEGURIDAD DE T.I")]
+
+        [Display(Name = "GERENTE DE SEGURIDAD DE T.I")]
         GerenteSegurTI,
-        [Description("ARQUITECTO ADMINISTRADOR Y ANALISTA DE REDES")]
+
+        [Display(Name = "ARQUITECTO ADMINISTRADOR Y ANALISTA DE REDES")]
         ArquitectoAdminAnalsRedes,
-        [Description("ADMINISTRADOR DE BASE DE DATOS")]
+
+        [Display(Name = "ADMINISTRADOR DE BASE DE DATOS")]
         AdministradorDB,
-        [Description("GERENTE DE OPERACIONES")]
+
+        [Display(Name = "GERENTE DE OPERACIONES")]
         GerenteOperaciones,
-        [Description("ANALISTA DE INTELIGENCIA DE NEGOCIO")]
+
+        [Display(Name = "ANALISTA DE INTELIGENCIA DE NEGOCIO")]
         AnalistaIntelNegocio,
-        [Description("ARQUITECTO DE SISTEMAS DE INFORMACION")]
+
+        [Display(Name = "ARQUITECTO DE SISTEMAS DE INFORMACION")]
         ArquitectoSistemInfo,
-        [Description("ARQUITECTURA DE SOFTWARE")]
+
+        [Display(Name = "ARQUITECTURA DE SOFTWARE")]
         ArquitecturaSoft,
-        [Description("ANALISTA DE CALIDAD DE SOFTWARE")]
+
+        [Display(Name = "ANALISTA DE CALIDAD DE SOFTWARE")]
         AnalistaCalidSoft,
-        [Description("DIRECTOR DE SOPORTE TECNICO")]
+
+        [Display(Name = "DIRECTOR DE SOPORTE TECNICO")]
         DirectorSoporTecnico,
-        [Description("ANALISTA DE SEGURIDAD INTERNA Y RIESGOS DE T.I")]
+
+        [Display(Name = "ANALISTA DE SEGURIDAD INTERNA Y RIESGOS DE T.I")]
         AnalistaSegurInterRiesgTI,
-        [Description("DIRECTOR DE GESTION INTERNA DE T.I")]
+
+        [Display(Name = "DIRECTOR DE GESTION INTERNA DE T.I")]
         DirectorGestInterTI
     }
 }
