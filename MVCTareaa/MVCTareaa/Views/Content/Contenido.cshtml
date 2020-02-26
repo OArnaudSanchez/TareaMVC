@@ -1,0 +1,20 @@
+﻿@using MVCTareaa.Models
+@model Content
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Contenido</h2>
+
+@using (Html.BeginForm("ContentRedirect", "Content", FormMethod.Post))
+{
+    @Html.DropDownListFor(a => a.Contenido,
+                                  new SelectList(Enum.GetValues(typeof(Contenidos))),
+                                  "Seleccione el contenido deseado", new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Contenido, null, new { @class = "text-danger" })
+    <br />
+
+    <input type="submit" value="ENVIAR" class="btn btn-success" />
+}
+

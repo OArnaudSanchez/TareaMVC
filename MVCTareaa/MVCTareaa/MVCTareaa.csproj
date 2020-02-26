@@ -179,6 +179,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\ConversionesController.cs" />
     <Compile Include="Controllers\FormularioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -189,6 +190,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Archivo.cs" />
+    <Compile Include="Models\Content.cs" />
     <Compile Include="Models\DatosConversiones.cs" />
     <Compile Include="Models\DatosUsuario.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -218,6 +220,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Script.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -254,6 +257,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Conversiones\Index.cshtml" />
     <Content Include="Views\Conversiones\Longitud.cshtml" />
+    <Content Include="Views\Formulario\EnvioDatos.cshtml" />
     <Content Include="Views\Conversiones\Temperatura.cshtml" />
     <Content Include="Views\Conversiones\Masa.cshtml" />
     <Content Include="Views\Conversiones\Datos.cshtml" />
@@ -263,12 +267,15 @@
     <Content Include="Views\Conversiones\PartialMasa.cshtml" />
     <Content Include="Views\Conversiones\PartialDatos.cshtml" />
     <Content Include="Views\LectorArchivos\Index.cshtml" />
+    <Content Include="Views\Content\Contenido.cshtml" />
+    <Content Include="Views\Content\Noticias.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="archivos\" />
     <Folder Include="Curriculums\" />
     <Folder Include="Fotos\" />
+    <Folder Include="ImgNews\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
