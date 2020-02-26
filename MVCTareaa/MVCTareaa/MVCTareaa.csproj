@@ -262,9 +262,7 @@
     <Content Include="Views\Conversiones\PartialLongitud.cshtml" />
     <Content Include="Views\Conversiones\PartialMasa.cshtml" />
     <Content Include="Views\Conversiones\PartialDatos.cshtml" />
-    <Content Include="Views\LectorArchivos\Completado.cshtml" />
     <Content Include="Views\LectorArchivos\Index.cshtml" />
-    <Content Include="Views\LectorArchivos\Datos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
