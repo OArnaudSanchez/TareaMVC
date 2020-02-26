@@ -66,7 +66,7 @@ namespace MVCTareaa.Controllers
                         string sheetName = dtExcelSchema.Rows[0]["TABLE_NAME"].ToString();
                         connExcel.Close();
 
-
+                    
                         connExcel.Open();
                         cmdExcel.CommandText = "Select * From [" + sheetName + "]";
                         odaExcel.SelectCommand = cmdExcel;
