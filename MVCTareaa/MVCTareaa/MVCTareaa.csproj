@@ -269,12 +269,14 @@
     <Content Include="Views\LectorArchivos\Index.cshtml" />
     <Content Include="Views\Content\Contenido.cshtml" />
     <Content Include="Views\Content\Noticias.cshtml" />
+    <Content Include="Views\Content\Musica.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="archivos\" />
     <Folder Include="Curriculums\" />
     <Folder Include="Fotos\" />
+    <Folder Include="ImgMusic\" />
     <Folder Include="ImgNews\" />
   </ItemGroup>
   <ItemGroup>
