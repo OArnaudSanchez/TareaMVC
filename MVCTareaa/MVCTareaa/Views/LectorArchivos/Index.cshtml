@@ -1,0 +1,62 @@
+﻿@using System.Data
+@model DataSet
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("Index", "LectorArchivos", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+
+    @Html.Raw(ViewBag.Error)<br>
+
+    <div class="form-group">
+        <span>Archivo Excel: </span><input type="file"  name="postedFile">
+        <br>
+    </div>
+    <div class="form-group">
+
+        <input type="submit" value="CARGAR ARCHIVO" class="btn btn-primary">
+    </div>
+}
+
+@if (Model != null)
+{
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    @foreach (DataColumn col in Model.Tables[0].Columns)
+                    {
+                        <th>@col.ColumnName</th>
+                    }
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (DataRow row in Model.Tables[0].Rows)
+                {
+
+                    <tr>
+                        @foreach (DataColumn col in Model.Tables[0].Columns)
+                        {
+                            <td>@row[col.ColumnName]</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+
+         </table>
+           
+    </div>
+}
+
+
+
+
+
+
+

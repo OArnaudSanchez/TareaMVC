@@ -349,3 +349,9 @@ C:\Users\Cheche\Desktop\Proyecto\TareaMVC\MVCTareaa\MVCTareaa\obj\Debug\MVCTarea
 C:\Users\Cheche\Desktop\Proyecto\TareaMVC\MVCTareaa\MVCTareaa\obj\Debug\MVCTareaa.csproj.CopyComplete
 C:\Users\Cheche\Desktop\Proyecto\TareaMVC\MVCTareaa\MVCTareaa\obj\Debug\MVCTareaa.dll
 C:\Users\Cheche\Desktop\Proyecto\TareaMVC\MVCTareaa\MVCTareaa\obj\Debug\MVCTareaa.pdb
+C:\Users\Cheche\Desktop\Proyecto\TareaMVC\MVCTareaa\MVCTareaa\bin\ExcelDataReader.DataSet.dll
+C:\Users\Cheche\Desktop\Proyecto\TareaMVC\MVCTareaa\MVCTareaa\bin\ExcelDataReader.dll
+C:\Users\Cheche\Desktop\Proyecto\TareaMVC\MVCTareaa\MVCTareaa\bin\ExcelDataReader.pdb
+C:\Users\Cheche\Desktop\Proyecto\TareaMVC\MVCTareaa\MVCTareaa\bin\ExcelDataReader.xml
+C:\Users\Cheche\Desktop\Proyecto\TareaMVC\MVCTareaa\MVCTareaa\bin\ExcelDataReader.DataSet.pdb
+C:\Users\Cheche\Desktop\Proyecto\TareaMVC\MVCTareaa\MVCTareaa\bin\ExcelDataReader.DataSet.xml
