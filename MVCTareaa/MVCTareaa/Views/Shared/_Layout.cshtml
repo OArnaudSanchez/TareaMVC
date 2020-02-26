@@ -24,7 +24,8 @@
                 <ul class="nav navbar-nav">
 
                     <li>@Html.ActionLink("Solicitud de empleo", "FormularioE", "Formulario")</li>
-                    <li>@Html.ActionLink("Conversion de Unidades", "Index", "Conversiones")</li>
+                    <li>@Html.ActionLink("Convertidor", "Index", "Conversiones")</li>
+                    <li>@Html.ActionLink("Contenido Variado", "Contenido", "Content")</li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
 
@@ -37,10 +38,11 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            @*<p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>*@
         </footer>
     </div>
 
+    <script src="~/Scripts/Script.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
