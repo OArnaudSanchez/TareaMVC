@@ -276,6 +276,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="archivos\" />
     <Folder Include="Curriculums\" />
+    <Folder Include="FotosMiembros\" />
     <Folder Include="Fotos\" />
     <Folder Include="ImgMusic\" />
     <Folder Include="ImgNews\" />
