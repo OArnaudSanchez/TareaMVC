@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Peliculas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/Script.js"></script>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<div class="wrap">
+    <h1>Peliculas</h1>
+    <div class="store-wrapper">
+        <div class="category_list">
+            <a href="#" class="category_item" category="all">Todo</a>
+            <a href="#" class="category_item" category="accion">Accion</a>
+            <a href="#" class="category_item" category="aventura">Aventuras</a>
+            <a href="#" class="category_item" category="drama">Drama</a>
+            <a href="#" class="category_item" category="infantil">Infantiles</a>
+            <a href="#" class="category_item" category="documental">Documentales</a>
+        </div>
+        <section class="movie-list">
+            <iframe class="movie-item" category="accion" src="https://www.youtube.com/embed/Amzj7xll3Aw" frameborder="0" allowfullscreen></iframe>
+            <iframe class="movie-item" category="aventura" src="https://www.youtube.com/embed/_HMlAUONvf8" frameborder="0"  allowfullscreen></iframe>
+            <iframe class="movie-item" category="drama" src="https://www.youtube.com/embed/syNoP_3mzyw" frameborder="0"  allowfullscreen></iframe>
+            <iframe class="movie-item" category="infantil" src="https://www.youtube.com/embed/AGAZoIlZtDE" frameborder="0"  allowfullscreen></iframe>
+            <iframe class="movie-item" category="documental" src="https://www.youtube.com/embed/QPVLaEpxSQc" frameborder="0"  allowfullscreen></iframe>
+        </section>
+    </div>
+</div>
+
+

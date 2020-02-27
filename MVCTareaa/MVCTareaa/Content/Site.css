@@ -74,43 +74,54 @@ textarea {
 
 /* Plataformas ============*/
 
-.news-list {
-    width: 82%;
+.news-list,
+.movie-list{
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
 }
 
+.movie-item {
+    width: 100%;
+    height: 90%;
+    margin-bottom: 11px;
+}
 
-    .news-list .new-item {
-        width: 22%;
-        margin-left: 3%;
-        margin-bottom: 25px;
-        box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.22);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-self: flex-start;
-        transition: all .4s;
-    }
+.news-list .new-item {
+    width: 22%;
+    margin-left: 3%;
+    margin-bottom: 25px;
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.22);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+    transition: all .4s;
+}
 
-        .news-list .news-item img {
-            width: 250px;
-        }
+.movie-list{
+    width: 80%;
+    height: 500px;
+}
 
-    .news-list .news-item a {
-        display: block;
-        width: 100%;
-        padding: 8px 0;
-        background: #2D3E50;
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-    }
+.news-list .news-item img {
+    width: 250px;
+}
+
+.news-list .news-item a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    background: #2D3E50;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
 
 /* RESPONSIVE */
 
 @media screen and (max-width: 1100px) {
-    .news-list .news-item .music-item .music-list{
+    .news-list .news-item .music-item .music-list .movie-list .movie-item {
         width: 30.3%;
     }
 }
@@ -118,7 +129,8 @@ textarea {
 @media screen and (max-width: 900px) {
     .category_list,
     .news-list,
-    .music-list
+    .music-list,
+    .movie-list
     {
         width: 100%;
     }
@@ -134,12 +146,13 @@ textarea {
             font-size: 14px;
         }
 
-    .news-list .news-item .music-item .music-list{
+    .news-list .news-item .music-item .music-list .movie-list .movie-item {
         margin-left: 4.5%;
     }
 
     .news-list .news-item:nth-child(3n+1),
-    .music-item:nth-child(3n+1) .music-list {
+    .music-item:nth-child(3n+1) .music-list,
+    .movie-list .movie-item:nth-child(3n+1) {
         margin-left: 0px;
     }
 }
@@ -157,22 +170,25 @@ textarea {
 
 @media screen and (max-width: 600px) {
 
-    .news-list .news-item .music-item .music-list {
+    .news-list .news-item .music-item .music-list .movie-list .movie-item {
         width: 47.5%;
     }
 
     .news-list .news-item:nth-child(3n+1),
-    .music-item:nth-child(3n+1) .music-list {
+    .music-item:nth-child(3n+1) .music-list,
+    .movie-list .movie-item:nth-child(3n+1) {
         margin-left: 4.5%;
     }
 
-        .news-list .news-item:nth-child(2n+1) {
-            margin-left: 0px;
-        }
+    .news-list .news-item:nth-child(2n+1),
+    .movie-list .movie-item:nth-child(3n+1),
+    .music-list .music-item:nth-child(3n+1){
+        margin-left: 0px;
+    }
 }
 
 @media screen and (max-width: 350px) {
-    .news-list .news_item .music-item .music-list {
+    .news-list .news_item .music-item .music-list .movie-list .movie-item {
         width: 100%;
         margin-left: 0px;
     }

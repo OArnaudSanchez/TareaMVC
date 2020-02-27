@@ -34,4 +34,28 @@
             $('.news-item').css('transform', 'scale(1)');
         } setTimeout(showAll, 600);
     });
+    $('.category_item').click(function () {
+        var catMovie = $(this).attr('category');
+        console.log(catMovie);
+        // OCULTANDO Peliculas =========================
+        $('.movie-item').css('transform', 'scale(0)');
+        function hideMovie() {
+            $('.movie-item').hide();
+        } setTimeout(hideMovie, 400);
+
+        // MOSTRANDO Peliculas =========================
+        function showMovie() {
+            $('.movie-item[category="' + catMovie + '"]').show();
+            $('.movie-item[category="' + catMovie + '"]').css('transform', 'scale(1)');
+        } setTimeout(showMovie, 600);
+
+        // MOSTRANDO TODOS LOS Peliculas =======================
+
+        $('.category_item[category="all"]').click(function () {
+            function showAll() {
+                $('.movie-item').show();
+                $('.movie-item').css('transform', 'scale(1)');
+            } setTimeout(showAll, 600);
+        });
+    });
 });

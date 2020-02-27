@@ -270,6 +270,7 @@
     <Content Include="Views\Content\Contenido.cshtml" />
     <Content Include="Views\Content\Noticias.cshtml" />
     <Content Include="Views\Content\Musica.cshtml" />
+    <Content Include="Views\Content\Peliculas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
