@@ -29,7 +29,7 @@ namespace MVCTareaa.Controllers
                 case "Películas":
                     return RedirectToAction("Peliculas");
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Contenido");
         }
 
         public ActionResult Noticias()

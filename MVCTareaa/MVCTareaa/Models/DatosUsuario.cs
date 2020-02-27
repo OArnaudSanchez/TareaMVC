@@ -2,21 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+
 
 namespace MVCTareaa.Models
 {
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
     public class DatosUsuario
     {
-        [Required]
+        [Required(ErrorMessage ="Ingrese su cédula corractamente")]
         public long Cedula { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Ingrese su nombre correctamente")]
         public string Nombre { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Ingrese su apellido correctamente")]
         public string Apellido { get; set; }
         [Required]
-        [Range(15,99)]
+        [Range(15,99, ErrorMessage = "Debe ser mayor de 15 años")]
         public int Edad { get; set; }
         public long Telefono { get; set; }
         [Display(Name = "Correo electrónico")]

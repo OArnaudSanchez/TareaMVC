@@ -3,64 +3,91 @@
 @using System.ComponentModel.DataAnnotations
 
 @{
-    ViewBag.Title = "Contact";
+    /**/
+
+    ViewBag.Title = "Solicitud de empleo";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2 class="title">@ViewBag.Title</h2>
 
-@using (Html.BeginForm("EnvioDatos", "Formulario", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.LabelFor(a => a.Cedula)
-    @Html.TextBoxFor(z => z.Cedula, new { @class = "form-control", placeholder = "Inserte su cédula" })
-    @Html.ValidationMessageFor(x => x.Cedula, null, new { @class = "text-danger" })
-    <br />
+<div class="formulario">
+    @using (Html.BeginForm("EnvioDatos", "Formulario", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="tabla">
+            <div class="col-left">
+                @Html.LabelFor(a => a.Cedula)
+                @Html.TextBoxFor(z => z.Cedula, new { @class = "form-control", placeholder = "Inserte su cédula" })
+                @Html.ValidationMessageFor(x => x.Cedula, null, new { @class = "text-danger" })
+                <br />
+            </div>
+            <div class="col-mid">
+                @Html.LabelFor(a => a.Nombre)
+                @Html.TextBoxFor(z => z.Nombre, new { @class = "form-control", placeholder = "Inserte su nombre" })
+                @Html.ValidationMessageFor(x => x.Nombre, null, new { @class = "text-danger" })
+                <br />
+            </div>
+            <div class="col-rght">
+                @Html.LabelFor(a => a.Apellido)
+                @Html.TextBoxFor(z => z.Apellido, new { @class = "form-control", placeholder = "Inserte su apellido" })
+                @Html.ValidationMessageFor(x => x.Apellido, null, new { @class = "text-danger" })
+                <br />
+            </div>
+        </div>
+        <div class="tabla">
+            <div class="col-left">
+                @Html.LabelFor(a => a.Edad)
+                @Html.TextBoxFor(z => z.Edad, new { @class = "form-control", placeholder = "Inserte su edad" })
+                @Html.ValidationMessageFor(x => x.Edad, null, new { @class = "text-danger" })
+                <br />
+            </div>
+            <div class="col-rght">
+                @Html.LabelFor(a => a.Telefono)
+                @Html.TextBoxFor(z => z.Telefono, new { @class = "form-control", placeholder = "Inserte su teléfono" })
+                @Html.ValidationMessageFor(x => x.Telefono, null, new { @class = "text-danger" })
+                <br />
+            </div>
+        </div>
 
-    @Html.LabelFor(a => a.Nombre)
-    @Html.TextBoxFor(z => z.Nombre, new { @class = "form-control", placeholder = "Inserte su nombre" })
-    @Html.ValidationMessageFor(x => x.Nombre, null, new { @class = "text-danger" })
-    <br />
-
-    @Html.LabelFor(a => a.Apellido)
-    @Html.TextBoxFor(z => z.Apellido, new { @class = "form-control", placeholder = "Inserte su apellido" })
-    @Html.ValidationMessageFor(x => x.Apellido, null, new { @class = "text-danger" })
-    <br />
-
-    @Html.LabelFor(a => a.Edad)
-    @Html.TextBoxFor(z => z.Edad, new { @class = "form-control", placeholder = "Inserte su edad" })
-    @Html.ValidationMessageFor(x => x.Edad, null, new { @class = "text-danger" })
-    <br />
-
-    @Html.LabelFor(a => a.Telefono)
-    @Html.TextBoxFor(z => z.Telefono, new { @class = "form-control", placeholder = "Inserte su teléfono" })
-    @Html.ValidationMessageFor(x => x.Telefono, null, new { @class = "text-danger" })
-    <br />
-
-    @Html.LabelFor(a => a.Email)
-    @Html.TextBoxFor(z => z.Email, new { @class = "form-control", placeholder = "Inserte su correo electronico" })
-    @Html.ValidationMessageFor(x => x.Email, null, new { @class = "text-danger" })
-    <br />
-
-    @Html.DropDownListFor(a => a.Genero,
+        @Html.LabelFor(a => a.Email)
+        @Html.TextBoxFor(z => z.Email, new { @class = "form-control", placeholder = "Inserte su correo electronico" })
+        @Html.ValidationMessageFor(x => x.Email, null, new { @class = "text-danger" })
+        <br />
+        <div class="tabla">
+            <div class="col-left">
+                @Html.DropDownListFor(a => a.Genero,
                               new SelectList(Enum.GetValues(typeof(Generos))),
                               "Seleccione su genero", new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.Genero, null, new { @class = "text-danger" })
-    <br />
+                @Html.ValidationMessageFor(x => x.Genero, null, new { @class = "text-danger" })
+                <br />
+            </div>
+            <div class="col-rght">
 
-    @Html.DropDownListFor(a => a.Puesto,
-                              new SelectList(Enum.GetValues(typeof(Puestos))),
-                              "Seleccione su puesto a aplicar", new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.Puesto, null, new { @class = "text-danger" })
-    <br />
+                @Html.DropDownListFor(a => a.Puesto,
+                                          new SelectList(Enum.GetValues(typeof(Puestos))),
+                                          "Seleccione su puesto a aplicar", new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Puesto, null, new { @class = "text-danger" })
+                <br />
+            </div>
+        </div>
+        <div class="tabla">
+            <div class="col-left">
+                @Html.LabelFor(a => a.foto)
+                @Html.TextBoxFor(z => z.foto, new { type = "file", accept = "image/png, .jpeg, .jpg", @class = "form-control", placeholder = "Foto 2x2" })
+                @Html.ValidationMessageFor(x => x.foto, null, new { @class = "text-danger" })
+                <br />
+            </div>
+            <div class="col-rght">
+                @Html.LabelFor(a => a.curriculum)
+                @Html.TextBoxFor(z => z.curriculum, new { type = "file", accept = "application/pdf", @class = "form-control", placeholder = "Curriculum" })
+                @Html.ValidationMessageFor(x => x.curriculum, null, new { @class = "text-danger" })
+                <br />
+            </div>
+        </div>
 
-    @Html.LabelFor(a => a.foto)
-    @Html.TextBoxFor(z => z.foto, new { type = "file", accept = "image/png, .jpeg, .jpg", @class = "form-control", placeholder = "Foto 2x2" })
-    @Html.ValidationMessageFor(x => x.foto, null, new { @class = "text-danger" })
+        <input type="submit" value="ENVIAR" class="btn btn-success" />
 
-    @Html.LabelFor(a => a.curriculum)
-    @Html.TextBoxFor(z => z.curriculum, new { type = "file", accept= "application/pdf", @class = "form-control", placeholder = "Curriculum" })
-    @Html.ValidationMessageFor(x => x.curriculum, null, new { @class = "text-danger" })
-
-    <input type="submit" value="ENVIAR" class="btn btn-success" />
-
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
 }
 

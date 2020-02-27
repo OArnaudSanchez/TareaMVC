@@ -40,7 +40,7 @@ namespace MVCTareaa.Controllers
             }
             ViewBag.StatusFoto = "Error al enviar la foto";
             ViewBag.StatusCurri = "Error al enviar el currículum";
-            return View("~/Shared/Error/");
+            return View(datosusuario);
 
         }
     }
