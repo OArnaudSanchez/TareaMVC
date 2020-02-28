@@ -7,7 +7,7 @@ namespace MVCTareaa.Models
 {
     public class Content
     {
-        [Required]
+        [Required(ErrorMessage ="Seleccione el contenido deseado")]
         public string Contenido { get; set; }
     }
 

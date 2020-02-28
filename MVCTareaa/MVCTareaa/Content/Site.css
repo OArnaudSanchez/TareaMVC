@@ -82,11 +82,6 @@ textarea {
     flex-wrap: wrap;
 }
 
-.movie-item {
-    width: 100%;
-    height: 90%;
-    margin-bottom: 11px;
-}
 
 .news-list .new-item {
     width: 22%;
@@ -125,6 +120,9 @@ textarea {
     .news-list .news-item .music-item .music-list .movie-list .movie-item {
         width: 30.3%;
     }
+}
+.news-item{
+    margin: 10px;
 }
 
 @media screen and (max-width: 900px) {
@@ -249,4 +247,202 @@ span{
 }
 .formulario{
     margin-top: 12px;
+
+.tabla{
+    display: flex;
+    width: 800px;
+}
+
+.form-control {
+    width: 95%;
+    margin-right: 71px;
+}
+
+.formulario {
+    padding-left: 14%;
+    width: 90%;
+}
+
+.btn-success {
+    background-color: #E84C3D;
+    border-color: #E84C3D;
+}
+
+.title{
+    font-weight: 600;
+}
+
+.navbar {
+    background-color: #2D3E50;
+}
+.navbar-inverse .navbar-brand {
+    background-color: #2D3E50;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-distributed {
+    background-color: #2D3E50;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    padding: 40px 38px;
+    margin-top: 35px;
+    position: absolute;
+    left: 0px;
+}
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .footer-distributed .footer-left {
+        width: 30%;
+    }
+
+    .footer-distributed h3 {
+        color: #ffffff;
+        font: normal 36px 'Cookie', cursive;
+        margin: 0;
+    }
+
+        .footer-distributed h3 span {
+            color: #E84C3D;
+        }
+
+
+    .footer-distributed .footer-links {
+        color: #ffffff;
+        margin: 20px 0 12px;
+        padding: 0;
+    }
+
+        .footer-distributed .footer-links a {
+            display: inline-block;
+            line-height: 1.8;
+            text-decoration: none;
+            color: inherit;
+        }
+
+    .footer-distributed .footer-company-name {
+        color: #8f9296;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+    }
+
+
+    .footer-distributed .footer-center {
+        width: 30%;
+        margin-right: 4%;
+    }
+
+        .footer-distributed .footer-center i {
+            background-color: #33383b;
+            color: #ffffff;
+            font-size: 25px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            margin: 10px 15px;
+            vertical-align: middle;
+        }
+
+            .footer-distributed .footer-center i.fa-envelope {
+                font-size: 17px;
+                line-height: 38px;
+            }
+
+        .footer-distributed .footer-center p {
+            display: inline-block;
+            color: #ffffff;
+            vertical-align: middle;
+            margin: 0;
+        }
+
+            .footer-distributed .footer-center p span {
+                display: block;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 2;
+            }
+
+            .footer-distributed .footer-center p a {
+                color: #5383d3;
+                text-decoration: none;
+                ;
+            }
+
+    .footer-distributed .footer-right {
+        width: 30%;
+    }
+
+    .footer-distributed .footer-company-about {
+        line-height: 20px;
+        color: #92999f;
+        font-size: 13px;
+        font-weight: normal;
+        margin: 0;
+    }
+
+        .footer-distributed .footer-company-about span {
+            display: block;
+            color: #E84C3D;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+    .footer-distributed .footer-icons {
+        margin-top: 25px;
+    }
+
+        .footer-distributed .footer-icons a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background-color: #33383b;
+            border-radius: 2px;
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }
+
+
+@media (max-width: 880px) {
+
+    .footer-distributed {
+        font: bold 14px sans-serif;
+    }
+
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right {
+            display: block;
+            width: 100%;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+            .footer-distributed .footer-center i {
+                margin-left: 0;
+            }
+
+    .main {
+        line-height: normal;
+        font-size: auto;
+    }
 }
