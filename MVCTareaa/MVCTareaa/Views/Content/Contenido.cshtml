@@ -6,7 +6,7 @@
 }
 
 <h2>Contenido</h2>
-
+<br />
 @using (Html.BeginForm("ContentRedirect", "Content", FormMethod.Post))
 {
     @Html.DropDownListFor(a => a.Contenido,
@@ -16,6 +16,8 @@
     <br />
 
     <input type="submit" value="INGRESAR" class="btn btn-success" />
+    <br />
+    <br />
 }
 
 @section Scripts {

@@ -198,7 +198,18 @@ textarea {
     flex-wrap: wrap;
 }
 
-
+.contenedor-info{
+    display: flex;
+    position: relative;
+    padding-left: 20%;
+}
+.info-rght{
+    padding-left:10%;
+}
+.foto{ 
+    width: 200px;
+    height: 250px;
+}
 .music-list .music-item {
     width: 30%;
     margin-left: 3%;
