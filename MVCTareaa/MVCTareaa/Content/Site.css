@@ -221,7 +221,7 @@ textarea {
     align-items: center;
     align-self: flex-start;
     transition: all .4s;
-}
+} 
 
 .music-list .music-item img {
     width: 308px;
@@ -254,7 +254,6 @@ textarea {
 }
 span{
     font-weight: bold;
-    font-size: 1.5rem;
 }
 .formulario{
     margin-top: 12px;
@@ -326,6 +325,7 @@ span{
 
         .footer-distributed h3 span {
             color: #E84C3D;
+            font-size: 3.5rem;
         }
 
 
@@ -456,4 +456,10 @@ span{
         line-height: normal;
         font-size: auto;
     }
+}
+
+.jumbotron h1{
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
 }

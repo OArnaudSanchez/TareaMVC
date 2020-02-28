@@ -2,35 +2,41 @@
 @model DatosUsuario
 @{
 
-    ViewBag.Title = "EnvioDatos";
+    ViewBag.Title = "Datos  - AtlasTecnology";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Datos</h1>
+<div class="jumbotron">
+    <h1>Datos</h1>
+    <div class="resultado" style=" display: flex;padding-left: 4%;">
+        <div class="col-right"  style="    margin-right: 20%;">
+            <h3>Cédula</h3>
+            <h4>@Model.Cedula</h4>
+            <h3>Nombre</h3>
+            <h4>@Model.Nombre</h4>
+            <h3>Apellido</h3>
+            <h4>@Model.Apellido</h4>
+            <h3>Edad</h3>
+            <h4>@Model.Edad</h4>
+            <h3>Telefono</h3>
+            <h4>@Model.Telefono</h4>
+            <h3>Correo Electronico</h3>
+            <h4>@Model.Email</h4>
+            <h3>Genero</h3>
+            <h4>@Model.Genero</h4>
+            <h3>Puesto a aplicar</h3>
+            <h4>@Model.Puesto</h4>
+            <h4>@ViewBag.StatusFoto</h4>
+        </div>
+        <div class="col-left">
+            <img src="~/archivos/formulario.png" />
+        </div>
+    </div>
+</div>
 
-<h3>Cédula</h3>
-<h4>@Model.Cedula</h4>
-<h3>Nombre</h3>
-<h4>@Model.Nombre</h4>
-<h3>Apellido</h3>
-<h4>@Model.Apellido</h4>
-<h3>Edad</h3>
-<h4>@Model.Edad</h4>
-<h3>Telefono</h3>
-<h4>@Model.Telefono</h4>
-<h3>Correo Electronico</h3>
-<h4>@Model.Email</h4>
-<h3>Genero</h3>
-<h4>@Model.Genero</h4>
-<h3>Puesto a aplicar</h3>
-<h4>@Model.Puesto</h4>
+        <iframe src='~/Curriculums/@ViewBag.curri' style='width:100%; height:700px;' frameborder='0'></iframe>";
 
-
-<h4>@ViewBag.StatusFoto</h4>
-
-<iframe src='~/Curriculums/@ViewBag.curri' style='width:100%; height:700px;' frameborder='0'></iframe>";
-
-@section Validation{
-    <script src="~/Scripts/jquery.validate.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-}
+        @section Validation{
+            <script src="~/Scripts/jquery.validate.js"></script>
+            <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+        }
