@@ -189,7 +189,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Archivo.cs" />
     <Compile Include="Models\Content.cs" />
     <Compile Include="Models\DatosConversiones.cs" />
     <Compile Include="Models\DatosUsuario.cs" />
@@ -261,11 +260,6 @@
     <Content Include="Views\Conversiones\Temperatura.cshtml" />
     <Content Include="Views\Conversiones\Masa.cshtml" />
     <Content Include="Views\Conversiones\Datos.cshtml" />
-    <Content Include="Views\Conversiones\PartialTemperatura.cshtml" />
-    <Content Include="Views\Conversiones\Acceder.cshtml" />
-    <Content Include="Views\Conversiones\PartialLongitud.cshtml" />
-    <Content Include="Views\Conversiones\PartialMasa.cshtml" />
-    <Content Include="Views\Conversiones\PartialDatos.cshtml" />
     <Content Include="Views\LectorArchivos\Index.cshtml" />
     <Content Include="Views\Content\Contenido.cshtml" />
     <Content Include="Views\Content\Noticias.cshtml" />

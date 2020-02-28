@@ -15,19 +15,22 @@ namespace MVCTareaa.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Acceder(DatosConversiones datos)
-        {
-            return View(datos);
+        public ActionResult Longitud()
+        { 
+            return View();
         }
-
 
         [HttpPost]
         public ActionResult Longitud(DatosConversiones datos)
         {
-            string resultadoLongitud = datos.ConversionLongitudFormaCorta();
-            ViewBag.miResultado = resultadoLongitud;
-            return View(datos);
+             string resultadoLongitud = datos.ConversionLongitudFormaCorta();
+             ViewBag.miResultado = resultadoLongitud;
+             return View(datos);
+        }
+
+        public ActionResult Temperatura( )
+        {
+            return View();
         }
 
         [HttpPost]
@@ -35,17 +38,26 @@ namespace MVCTareaa.Controllers
         {
            string resultado = datos.ConversionTemperaturaFormaCorta();
             ViewBag.miResultado = resultado;
-
-
             return View(datos);
         }
-        
+
+
+        public ActionResult Masa( )
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Masa(DatosConversiones datos)
         {
             string resultado = datos.ConversionMasaFormaCorta();
             ViewBag.miResultado = resultado;
             return View(datos);
+        }
+
+        public ActionResult Datos( )
+        {
+            return View();
         }
 
         [HttpPost]

@@ -1,9 +1,45 @@
 ﻿@model MVCTareaa.Models.DatosConversiones
 @{
-    ViewBag.Title = "Longitud";
+                /**/
+
+                ViewBag.Title = "Conversion de Longitud";
 }
 
 <h2>Longitud</h2>
 
-<p>@ViewBag.miResultado </p>
+<div>
+    <img src="~/archivos/longitud.jpg" width="400" height="300" style="float: right; margin-right: 10%"><br>
+</div>
+
+@using (Html.BeginForm("Longitud", "Conversiones", FormMethod.Post, new { @class = "formulario" }))
+{
+    @Html.Label("Cantidad: ")
+    @Html.TextBoxFor(x => x.CampoTexto, new { @class = "form-control" })<br>
+    @Html.ValidationMessageFor(x => x.CampoTexto)
+
+    @Html.Label("Seleccione la Conversion que desea")<br>
+
+    <strong>De: </strong>
+
+    @Html.DropDownListFor(x => x.ConvesionesLongitudFormaCorta1, new SelectList(new[] { "Centimetros", "Pies", "Pulgadas","Metros","Kilometros",
+    "Millas" }), "Seleccionar la conversion", new { @class = "form-control" })<br>
+
+    <strong>A: </strong>
+    @Html.DropDownListFor(x => x.ConvesionesLongitudFormaCorta2, new SelectList(new[] { "Centimetros", "Pies", "Pulgadas", "Metros", "Kilometros",
+    "Millas" }), "Seleccionar la conversion", new { @class = "form-control" })<br>
+
+
+    <input type="submit" value="CALCULAR LONGITUD" class="btn btn-success">
+    <button formaction="~\Conversiones/Index" class="btn btn-primary">Volver</button><br>
+}
+
+
+@{
+    if (Model.CampoTexto != 0)
+    {
+        <script type="text/javascript">alert('@ViewBag.miResultado')</script>
+    }
+
+}
+
 

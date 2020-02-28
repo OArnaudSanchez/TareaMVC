@@ -5,18 +5,36 @@
 
 <h2>Seleccionar Conversion</h2>
 
-<p>Que conversion desea Hacer</p>
 
+<link href="~/Content/Site.css" rel="stylesheet" />
 
 @using (Html.BeginForm("Acceder","Conversiones",FormMethod.Post))
 {
-    @Html.RadioButtonFor(x => x.OpcionConversion, "Longitud")<strong>Longitud</strong><br>
-    @Html.RadioButtonFor(x => x.OpcionConversion, "Temperatura")<strong>Temperatura</strong><br>
-    @Html.RadioButtonFor(x => x.OpcionConversion, "Masa")<strong>Masa</strong><br>
-    @Html.RadioButtonFor(x => x.OpcionConversion, "Datos")<strong>Datos</strong><br>
 
-
-    <input type="submit" value="Acceder" class="btn btn-primary">
+<div class="contenedor">
+    <div class="row">
+        <div class="col col-sm-3">
+            <span>Conversion de Longitud</span>
+            <img src="~/archivos/longitud.jpg"><br>
+            <button formaction="~\Conversiones/Longitud" class="btn btn-success">Ingresar</button><br>
+        </div>
+        <div class="col col-sm-3">
+            <span>Conversion de Temperaturas</span>
+            <img src="~/archivos/temperatura.jpg"><br>
+            <button formaction="~\Conversiones/Temperatura" class="btn btn-success">Ingresar</button>
+        </div>
+        <div class="col col-sm-3">
+            <span>Conversion de Masa</span>
+            <img src="~/archivos/masa.jpg"><br>
+            <button formaction="~\Conversiones/Masa" class="btn btn-success">Ingresar</button><br>
+        </div>
+        <div class="col col-sm-3">
+            <span>Conversion de Datos</span>
+            <img src="~/archivos/datos.jpg"><br>
+            <button formaction="~\Conversiones/Datos" class="btn btn-success">Ingresar</button><br>
+        </div>
+    </div>
+</div>
 }
 
 
