@@ -1,9 +1,45 @@
 ﻿@model MVCTareaa.Models.DatosConversiones
 @{
-    ViewBag.Title = "Masa";
+    ViewBag.Title = "Conversion de Masa";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Masa</h2>
 
-<p>@ViewBag.miResultado </p>
+<div>
+    <img src="~/archivos/masa.jpg" width="400" height="300" style="float: right; margin-right: 10%"><br>
+</div>
+
+@using (Html.BeginForm("Masa", "Conversiones", FormMethod.Post))
+{
+    @Html.Label("Cantidad: ")
+    @Html.TextBoxFor(x => x.CampoTexto, new { @class = "form-control" })<br>
+
+    @Html.Label("Seleccione la Conversion que desea")<br>
+
+    <strong>De: </strong>
+
+    @Html.DropDownListFor(x => x.ConvesionesMasaFormaCorta1, new SelectList(new[] { "Gramos", "Kilogramo", "Onza",
+    "Libra" }), "Seleccionar la conversion", new { @class = "form-control" })<br>
+
+
+    <strong>A: </strong>
+    @Html.DropDownListFor(x => x.ConvesionesMasaFormaCorta2, new SelectList(new[] { "Gramos", "Kilogramo", "Onza",
+    "Libra" }), "Seleccionar la conversion", new { @class = "form-control" })<br>
+
+
+    <input type="submit" value="CALCULAR MASA" class="btn btn-success">
+    <button formaction="~\Conversiones/Index" class="btn btn-primary">Volver</button><br>
+}
+
+@{
+
+   
+
+   if (Model.CampoTexto != 0)
+    {
+        <script type="text/javascript">alert('@ViewBag.miResultado')</script>
+    }
+
+
+}

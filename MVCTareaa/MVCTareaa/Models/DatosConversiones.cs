@@ -31,33 +31,33 @@ namespace MVCTareaa.Models
         {
             if (ConvesionesTemperaturasFormaCorta1.ToString() == "Celcius" && ConvesionesTemperaturasFormaCorta2.ToString()== "Farenheit")
             {
-                Resultado = (CampoTexto * 1.8) + 32;
+                Resultado = Math.Round(((CampoTexto * 1.8) + 32),4);
             }
             else if (ConvesionesTemperaturasFormaCorta1.ToString() == "Celcius" && ConvesionesTemperaturasFormaCorta2.ToString() == "Kelvin")
             {
-                Resultado = 273 + CampoTexto;
+                Resultado = Math.Round((273 + CampoTexto),4);
             }
 
             else if (ConvesionesTemperaturasFormaCorta1.ToString() == "Farenheit" && ConvesionesTemperaturasFormaCorta2.ToString() == "Celcius")
             {
-                Resultado = ((CampoTexto - 32) / 1.8);
+                Resultado = Math.Round(((CampoTexto - 32) / 1.8),4);
             }
             else if (ConvesionesTemperaturasFormaCorta1.ToString() == "Farenheit" && ConvesionesTemperaturasFormaCorta2.ToString() == "Kelvin")
             {
-                Resultado = ((CampoTexto - 32) / 1.8000) + 273.15;
+                Resultado = Math.Round((((CampoTexto - 32) / 1.8000) + 273.15),4);
             }
 
             else if (ConvesionesTemperaturasFormaCorta1.ToString() == "Kelvin" && ConvesionesTemperaturasFormaCorta2.ToString() == "Celcius")
             {
-                Resultado = CampoTexto - 273;
+                Resultado = Math.Round((CampoTexto - 273),4);
             }
             else if (ConvesionesTemperaturasFormaCorta1.ToString() == "Kelvin" && ConvesionesTemperaturasFormaCorta2.ToString() == "Farenheit")
             {
-                Resultado = ((CampoTexto - 273.15) * 1.8000) + 32.00;
+                Resultado = Math.Round((((CampoTexto - 273.15) * 1.8000) + 32.00),4);
             }
             else
             {
-                Resultado = 0;   
+                Resultado = 0000;   
             }
             return "El Resultado De Convertir " + CampoTexto + " " + ConvesionesTemperaturasFormaCorta1.ToString() +" A "
                 +ConvesionesTemperaturasFormaCorta2.ToString() + " Es: "+ Resultado + " Grados " +ConvesionesTemperaturasFormaCorta2.ToString();
@@ -66,134 +66,134 @@ namespace MVCTareaa.Models
 
         public string ConversionLongitudFormaCorta()
         {
-            if (ConvesionesLongitudFormaCorta1.ToString() == "Centimetro" && ConvesionesLongitudFormaCorta2.ToString()=="Pies")
+            if (ConvesionesLongitudFormaCorta1.ToString() == "Centimetros" && ConvesionesLongitudFormaCorta2.ToString()=="Pies")
             {
-                Resultado = Math.Round((CampoTexto / 30.48), 10);
+                Resultado = Math.Round((CampoTexto / 30.48), 4);
             }
-            else if (ConvesionesLongitudFormaCorta1.ToString() == "Centimetro" && ConvesionesLongitudFormaCorta2.ToString() == "Pulgadas")
+            else if (ConvesionesLongitudFormaCorta1.ToString() == "Centimetros" && ConvesionesLongitudFormaCorta2.ToString() == "Pulgadas")
             {
-                Resultado = Math.Round((CampoTexto / 2.54), 10);
+                Resultado = Math.Round((CampoTexto / 2.54), 4);
             }
-            else if (ConvesionesLongitudFormaCorta1.ToString() == "Centimetro" && ConvesionesLongitudFormaCorta2.ToString() == "Metros")
+            else if (ConvesionesLongitudFormaCorta1.ToString() == "Centimetros" && ConvesionesLongitudFormaCorta2.ToString() == "Metros")
             {
-                Resultado = Math.Round((CampoTexto / 100), 10);
+                Resultado = Math.Round((CampoTexto / 100), 4);
             }
-            else if (ConvesionesLongitudFormaCorta1.ToString() == "Centimetro" && ConvesionesLongitudFormaCorta2.ToString() == "Kilometros")
+            else if (ConvesionesLongitudFormaCorta1.ToString() == "Centimetros" && ConvesionesLongitudFormaCorta2.ToString() == "Kilometros")
             {
-                Resultado = Math.Round((CampoTexto / 100000), 10);
+                Resultado = Math.Round((CampoTexto / 100000), 4);
             }
-            else if (ConvesionesLongitudFormaCorta1.ToString() == "Centimetro" && ConvesionesLongitudFormaCorta2.ToString() == "Millas")
+            else if (ConvesionesLongitudFormaCorta1.ToString() == "Centimetros" && ConvesionesLongitudFormaCorta2.ToString() == "Millas")
             {
-                Resultado = Math.Round((CampoTexto / 160934), 10);//La conversion es un resultado aproximado
+                Resultado = Math.Round((CampoTexto / 160934), 4);//La conversion es un resultado aproximado
             }
 
-            else if (ConvesionesLongitudFormaCorta1.ToString() == "Pies" && ConvesionesLongitudFormaCorta2.ToString() == "Centimetro")
+            else if (ConvesionesLongitudFormaCorta1.ToString() == "Pies" && ConvesionesLongitudFormaCorta2.ToString() == "Centimetros")
             {
-                Resultado = CampoTexto * 30.48;
+                Resultado = Math.Round((CampoTexto * 30.48),4);
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Pies" && ConvesionesLongitudFormaCorta2.ToString() == "Pulgadas")
             {
-                Resultado = CampoTexto * 12;
+                Resultado = Math.Round((CampoTexto * 12),4);
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Pies" && ConvesionesLongitudFormaCorta2.ToString() == "Metros")
             {
-                Resultado = CampoTexto / 3.281;//Valor Aproximado
+                Resultado = Math.Round((CampoTexto / 3.281), 4);//Valor Aproximado
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Pies" && ConvesionesLongitudFormaCorta2.ToString() == "Kilometros")
             {
-                Resultado = CampoTexto / 3281;//Valor Aproximado
+                Resultado = Math.Round((CampoTexto / 3281),4);//Valor Aproximado
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Pies" && ConvesionesLongitudFormaCorta2.ToString() == "Millas")
             {
-                Resultado = CampoTexto / 5280;
+                Resultado = Math.Round((CampoTexto / 5280),4);
             }
 
-            else if (ConvesionesLongitudFormaCorta1.ToString() == "Pulgadas" && ConvesionesLongitudFormaCorta2.ToString() == "Centimetro")
+            else if (ConvesionesLongitudFormaCorta1.ToString() == "Pulgadas" && ConvesionesLongitudFormaCorta2.ToString() == "Centimetros")
             {
-                Resultado = CampoTexto * 2.54;
+                Resultado = Math.Round((CampoTexto * 2.54),4);
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Pulgadas" && ConvesionesLongitudFormaCorta2.ToString() == "Pies")
             {
-                Resultado = CampoTexto / 12;
+                Resultado = Math.Round((CampoTexto / 12),4);
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Pulgadas" && ConvesionesLongitudFormaCorta2.ToString() == "Metros")
             {
-                Resultado = CampoTexto / 39.37;
+                Resultado = Math.Round((CampoTexto / 39.37),4);
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Pulgadas" && ConvesionesLongitudFormaCorta2.ToString() == "Kilometros")
             {
-                Resultado = CampoTexto / 39370;//Valor Aprox
+                Resultado = Math.Round((CampoTexto / 39370),4);//Valor Aprox
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Pulgadas" && ConvesionesLongitudFormaCorta2.ToString() == "Milla")
             {
-                Resultado = CampoTexto / 63360;
+                Resultado = Math.Round((CampoTexto / 63360),4);
             }
 
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Metros" && ConvesionesLongitudFormaCorta2.ToString() == "Centimetros")
             {
-                Resultado = CampoTexto / 100;
+                Resultado = Math.Round((CampoTexto * 100),4);
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Metros" && ConvesionesLongitudFormaCorta2.ToString() == "Pies")
             {
-                Resultado = CampoTexto * 3.281;//Valor Aprox
+                Resultado = Math.Round((CampoTexto * 3.281),4);//Valor Aprox
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Metros" && ConvesionesLongitudFormaCorta2.ToString() == "Pulgadas")
             {
-                Resultado = CampoTexto * 39.37;
+                Resultado =Math.Round(( CampoTexto * 39.37),4);
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Metros" && ConvesionesLongitudFormaCorta2.ToString() == "Kilometros")
             {
-                Resultado = CampoTexto / 1000;
+                Resultado = Math.Round((CampoTexto / 1000),4);
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Metros" && ConvesionesLongitudFormaCorta2.ToString() == "Millas")
             {
-                Resultado = CampoTexto / 1609;//Valor Aprox
+                Resultado = Math.Round((CampoTexto / 1609),4);//Valor Aprox
             }
 
-            else if (ConvesionesLongitudFormaCorta1.ToString() == "Kilometros" && ConvesionesLongitudFormaCorta2.ToString() == "Centimetro")
+            else if (ConvesionesLongitudFormaCorta1.ToString() == "Kilometros" && ConvesionesLongitudFormaCorta2.ToString() == "Centimetros")
             {
-                Resultado = CampoTexto * 100000;
+                Resultado = Math.Round((CampoTexto * 100000),4);
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Kilometros" && ConvesionesLongitudFormaCorta2.ToString() == "Pies")
             {
-                Resultado = CampoTexto * 3281;//Valor aprox
+                Resultado = Math.Round((CampoTexto * 3281),4);//Valor aprox
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Kilometros" && ConvesionesLongitudFormaCorta2.ToString() == "Pulgadas")
             {
-                Resultado = CampoTexto * 39370;//Valor Aprox
+                Resultado =Math.Round((CampoTexto * 39370),4);//Valor Aprox
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Kilometros" && ConvesionesLongitudFormaCorta2.ToString() == "Metros")
             {
-                Resultado = CampoTexto * 1000;
+                Resultado = Math.Round((CampoTexto * 1000),4);
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Kilometros" && ConvesionesLongitudFormaCorta2.ToString() == "Millas")
             {
-                Resultado = CampoTexto * 0.62137;
+                Resultado = Math.Round((CampoTexto * 0.62137),4);
             }
 
-            else if (ConvesionesLongitudFormaCorta1.ToString() == "Millas" && ConvesionesLongitudFormaCorta2.ToString() == "Centimetro")
+            else if (ConvesionesLongitudFormaCorta1.ToString() == "Millas" && ConvesionesLongitudFormaCorta2.ToString() == "Centimetros")
             {
-                Resultado = CampoTexto * 160934;//Valor aprox 
+                Resultado = Math.Round((CampoTexto * 160934),4);//Valor aprox 
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Millas" && ConvesionesLongitudFormaCorta2.ToString() == "Pies")
             {
-                Resultado = CampoTexto * 5280;
+                Resultado = Math.Round((CampoTexto * 5280),4);
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Millas" && ConvesionesLongitudFormaCorta2.ToString() == "Pulgadas")
             {
-                Resultado = CampoTexto * 63360;
+                Resultado = Math.Round((CampoTexto * 63360),4);
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Millas" && ConvesionesLongitudFormaCorta2.ToString() == "Metros")
             {
-                Resultado = CampoTexto * 1609;//Valor Aproximado
+                Resultado = Math.Round((CampoTexto * 1609),4);//Valor Aproximado
             }
             else if (ConvesionesLongitudFormaCorta1.ToString() == "Millas" && ConvesionesLongitudFormaCorta2.ToString() == "Kilometros")
             {
-                Resultado = CampoTexto * 1.609;
+                Resultado = Math.Round((CampoTexto * 1.609),4);
             }
             else
             {
-                Resultado = 0.00;
+                Resultado = 0000;
             }
 
             return "El Resultado De Convertir " + CampoTexto + " " + ConvesionesLongitudFormaCorta1.ToString() + " A " +
@@ -202,64 +202,64 @@ namespace MVCTareaa.Models
 
         public string ConversionMasaFormaCorta()
         {
-            if (ConvesionesMasaFormaCorta1.ToString() == "Gramo" && ConvesionesMasaFormaCorta2.ToString() == "Kilogramo")
+            if (ConvesionesMasaFormaCorta1.ToString() == "Gramos" && ConvesionesMasaFormaCorta2.ToString() == "Kilogramo")
             {
-                Resultado = CampoTexto / 1000;
+                Resultado = Math.Round((CampoTexto / 1000),4);
             }
-            else if (ConvesionesMasaFormaCorta1.ToString() == "Gramo" && ConvesionesMasaFormaCorta2.ToString() == "Onza")
+            else if (ConvesionesMasaFormaCorta1.ToString() == "Gramos" && ConvesionesMasaFormaCorta2.ToString() == "Onza")
             {
-                Resultado = CampoTexto / 28.35;//Valor Aprox
+                Resultado = Math.Round((CampoTexto / 28.35),4);//Valor Aprox
             }
-            else if (ConvesionesMasaFormaCorta1.ToString() == "Gramo" && ConvesionesMasaFormaCorta2.ToString() == "Libra")
+            else if (ConvesionesMasaFormaCorta1.ToString() == "Gramos" && ConvesionesMasaFormaCorta2.ToString() == "Libra")
             {
-                Resultado = CampoTexto / 454;//Valor Aprox
+                Resultado = Math.Round((CampoTexto / 454),4);//Valor Aprox
             }
 
 
-            else if (ConvesionesMasaFormaCorta1.ToString() == "Kilogramo" && ConvesionesMasaFormaCorta2.ToString() == "Gramo")
+            else if (ConvesionesMasaFormaCorta1.ToString() == "Kilogramo" && ConvesionesMasaFormaCorta2.ToString() == "Gramos")
             {
-                Resultado = Math.Round((CampoTexto * 1000), 10);
+                Resultado = Math.Round((CampoTexto * 1000), 4);
             }
             else if (ConvesionesMasaFormaCorta1.ToString() == "Kilogramo" && ConvesionesMasaFormaCorta2.ToString() == "Onza")
             {
-                Resultado = CampoTexto * 35.274;
+                Resultado = Math.Round((CampoTexto * 35.274),4);
             }
             else if (ConvesionesMasaFormaCorta1.ToString() == "Kilogramo" && ConvesionesMasaFormaCorta2.ToString() == "Libra")
             {
-                Resultado = CampoTexto * 2.205;//Valor Aprox
+                Resultado = Math.Round((CampoTexto * 2.205),4);//Valor Aprox
             }
 
 
-            else if (ConvesionesMasaFormaCorta1.ToString() == "Onza" && ConvesionesMasaFormaCorta2.ToString() == "Gramo")
+            else if (ConvesionesMasaFormaCorta1.ToString() == "Onza" && ConvesionesMasaFormaCorta2.ToString() == "Gramos")
             {
-                Resultado = CampoTexto * 28.35;//Valor Aprox
+                Resultado = Math.Round((CampoTexto * 28.35),4);//Valor Aprox
             }
             else if (ConvesionesMasaFormaCorta1.ToString() == "Onza" && ConvesionesMasaFormaCorta2.ToString() == "Kilogramo")
             {
-                Resultado = CampoTexto / 35.274;
+                Resultado = Math.Round((CampoTexto / 35.274),4);
             }
             else if (ConvesionesMasaFormaCorta1.ToString() == "Onza" && ConvesionesMasaFormaCorta2.ToString() == "Libra")
             {
-                Resultado = CampoTexto / 16;
+                Resultado = Math.Round((CampoTexto / 16),4);
             }
 
-            else if (ConvesionesMasaFormaCorta1.ToString() == "Libra" && ConvesionesMasaFormaCorta2.ToString() == "Gramo")
+            else if (ConvesionesMasaFormaCorta1.ToString() == "Libra" && ConvesionesMasaFormaCorta2.ToString() == "Gramos")
             {
-                Resultado = CampoTexto / 454;//Valor Aprox
+                Resultado = Math.Round((CampoTexto / 454),4);//Valor Aprox
 
             }
             
             else if (ConvesionesMasaFormaCorta1.ToString() == "Libra" && ConvesionesMasaFormaCorta2.ToString() == "Kilogramo")
             {
-                Resultado = CampoTexto / 2.205;//Valor Aprox
+                Resultado = Math.Round((CampoTexto / 2.205),4);//Valor Aprox
             }
             else if (ConvesionesMasaFormaCorta1.ToString() == "Libra" && ConvesionesMasaFormaCorta2.ToString() == "Onza")
             {
-                Resultado = CampoTexto * 16;
+                Resultado = Math.Round((CampoTexto * 16),4);
             }
             else
             {
-                Resultado = 0.00;
+                Resultado = 0000;
             }
             return "El Resultado De Convertir " + CampoTexto + " " + ConvesionesMasaFormaCorta1.ToString() + " A " +
                 ConvesionesMasaFormaCorta2.ToString() + " Es: " + Resultado + " " + ConvesionesMasaFormaCorta2.ToString();
@@ -270,128 +270,132 @@ namespace MVCTareaa.Models
 
             if (ConvesionesDatosFormaCorta1.ToString() == "Bit" && ConvesionesDatosFormaCorta2.ToString()=="Byte")
             {
-                Resultado = Math.Round((CampoTexto / 8), 10);
+                Resultado = Math.Round((CampoTexto / 8), 4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Bit" && ConvesionesDatosFormaCorta2.ToString() == "Kilobyte")
             {
-                Resultado = CampoTexto / 8000;
+                Resultado = Math.Round((CampoTexto / 8000),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Bit" && ConvesionesDatosFormaCorta2.ToString() == "Megabyte")
             {
-                Resultado = CampoTexto / 8e+6;
+                Resultado = Math.Round((CampoTexto / 8e+6),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Bit" && ConvesionesDatosFormaCorta2.ToString() == "Gigabyte")
             {
-                Resultado = CampoTexto / 8e+9;
+                Resultado = Math.Round((CampoTexto / 8e+9),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Bit" && ConvesionesDatosFormaCorta2.ToString() == "Terabyte")
             {
-                Resultado = CampoTexto / 8e+12;
+                Resultado = Math.Round((CampoTexto / 8e+12),4);
             }
 
             else if (ConvesionesDatosFormaCorta1.ToString() == "Byte" && ConvesionesDatosFormaCorta2.ToString() == "Bit")
             {
-                Resultado = CampoTexto * 8;
+                Resultado = Math.Round((CampoTexto * 8),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Byte" && ConvesionesDatosFormaCorta2.ToString() == "Kilobyte")
             {
-                Resultado = CampoTexto / 1000;
+                Resultado = Math.Round((CampoTexto / 1000),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Byte" && ConvesionesDatosFormaCorta2.ToString() == "Megabyte")
             {
-                Resultado = CampoTexto / 1e+6;
+                Resultado = Math.Round((CampoTexto / 1e+6),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Bit" && ConvesionesDatosFormaCorta2.ToString() == "Gigabyte")
             {
-                Resultado = CampoTexto / 1e+9;
+                Resultado = Math.Round((CampoTexto / 1e+9),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Bit" && ConvesionesDatosFormaCorta2.ToString() == "Terabyte")
             {
-                Resultado = CampoTexto / 1e+12;
+                Resultado = Math.Round((CampoTexto / 1e+12),4);
             }
 
             else if (ConvesionesDatosFormaCorta1.ToString() == "Kilobyte" && ConvesionesDatosFormaCorta2.ToString() == "Bit")
             {
-                Resultado = CampoTexto * 8000;
+                Resultado = Math.Round((CampoTexto * 8000),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Kilobyte" && ConvesionesDatosFormaCorta2.ToString() == "Byte")
             {
-                Resultado = CampoTexto * 1000;
+                Resultado = Math.Round((CampoTexto * 1000),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Kilobyte" && ConvesionesDatosFormaCorta2.ToString() == "Megabyte")
             {
-                Resultado = CampoTexto / 1000;
+                Resultado = Math.Round((CampoTexto / 1000),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Kilobyte" && ConvesionesDatosFormaCorta2.ToString() == "Gigabyte")
             {
-                Resultado = CampoTexto / 1e+6;
+                Resultado = Math.Round((CampoTexto / 1e+6),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Kilobyte" && ConvesionesDatosFormaCorta2.ToString() == "Terabyte")
             {
-                Resultado = CampoTexto / 1e+9; //Valor Aprox
+                Resultado = Math.Round((CampoTexto / 1e+9),4); //Valor Aprox
             }
 
             else if (ConvesionesDatosFormaCorta1.ToString() == "Megabyte" && ConvesionesDatosFormaCorta2.ToString() == "Bit")
             {
-                Resultado = CampoTexto * 8e+6;
+                Resultado = Math.Round((CampoTexto * 8e+6),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Megabyte" && ConvesionesDatosFormaCorta2.ToString() == "Byte")
             {
-                Resultado = CampoTexto * 1e+6;
+                Resultado = Math.Round((CampoTexto * 1e+6),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Megabyte" && ConvesionesDatosFormaCorta2.ToString() == "Kilobyte")
             {
-                Resultado = CampoTexto * 1000;
+                Resultado = Math.Round((CampoTexto * 1000),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Megabyte" && ConvesionesDatosFormaCorta2.ToString() == "Gigabyte")
             {
-                Resultado = CampoTexto / 1000;
+                Resultado = Math.Round((CampoTexto / 1000),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Megabyte" && ConvesionesDatosFormaCorta2.ToString() == "Terabyte")
             {
-                Resultado = CampoTexto / 1e+6;
+                Resultado = Math.Round((CampoTexto / 1e+6),4);
             }
 
             else if (ConvesionesDatosFormaCorta1.ToString() == "Gigabyte" && ConvesionesDatosFormaCorta2.ToString() == "Bit")
             {
-                Resultado = CampoTexto * 8e+9;
+                Resultado = Math.Round((CampoTexto * 8e+9),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Gigabyte" && ConvesionesDatosFormaCorta2.ToString() == "Byte")
             {
-                Resultado = CampoTexto * 1e+9;
+                Resultado = Math.Round((CampoTexto * 1e+9),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Gigabyte" && ConvesionesDatosFormaCorta2.ToString() == "Kilobyte")
             {
-                Resultado = CampoTexto * 1e+6;
+                Resultado = Math.Round((CampoTexto * 1e+6),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Gigabyte" && ConvesionesDatosFormaCorta2.ToString() == "Megabyte")
             {
-                Resultado = CampoTexto * 1000;
+                Resultado = Math.Round((CampoTexto * 1000),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Gigabyte" && ConvesionesDatosFormaCorta2.ToString() == "Terabyte")
             {
-                Resultado = CampoTexto / 1000;
+                Resultado = Math.Round((CampoTexto / 1000),4);
             }
 
             else if (ConvesionesDatosFormaCorta1.ToString() == "Terabyte" && ConvesionesDatosFormaCorta2.ToString() == "Bit")
             {
-                Resultado = CampoTexto * 8e+12;
+                Resultado = Math.Round((CampoTexto * 8e+12),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Terabyte" && ConvesionesDatosFormaCorta2.ToString() == "Byte")
             {
-                Resultado = CampoTexto * 1e+12;
+                Resultado = Math.Round((CampoTexto * 1e+12),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Terabyte" && ConvesionesDatosFormaCorta2.ToString() == "Kilobyte")
             {
-                Resultado = CampoTexto * 1e+9;
+                Resultado = Math.Round((CampoTexto * 1e+9),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Terabyte" && ConvesionesDatosFormaCorta2.ToString() == "Megabyte")
             {
-                Resultado = CampoTexto * 1e+6;
+                Resultado = Math.Round((CampoTexto * 1e+6),4);
             }
             else if (ConvesionesDatosFormaCorta1.ToString() == "Terabyte" && ConvesionesDatosFormaCorta2.ToString() == "Gigabyte")
             {
-                Resultado = CampoTexto * 1000;
+                Resultado = Math.Round((CampoTexto * 1000),4);
+            }
+            else
+            {
+                Resultado = 0000;
             }
 
 
@@ -412,22 +416,22 @@ namespace MVCTareaa.Models
 
     public enum ConvesionesMasaFormaCorta1
     {
-        Gramo , Kilogramo,Onza,Libra
+        Gramos , Kilogramo,Onza,Libra
     }
 
     public enum ConvesionesMasaFormaCorta2
     {
-        Gramo, Kilogramo, Onza, Libra
+        Gramos, Kilogramo, Onza, Libra
     }
 
 
     public enum ConvesionesLongitudFormaCorta1
     {
-        Centimetro, Pies, Pulgadas,Metros ,Kilometros,Millas
+        Centimetros, Pies, Pulgadas,Metros ,Kilometros,Millas
     }
     public enum ConvesionesLongitudFormaCorta2
     {
-        Centimetro, Pies, Pulgadas, Metros, Kilometros, Millas
+        Centimetros, Pies, Pulgadas, Metros, Kilometros, Millas
     }
 
 

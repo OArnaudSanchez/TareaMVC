@@ -1,8 +1,43 @@
 ﻿@model MVCTareaa.Models.DatosConversiones
 @{
-    ViewBag.Title = "Datos";
+    ViewBag.Title = "Conversion de Datos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Conversiones de Datos</h2>
-<p>@ViewBag.miResultado </p>
+<h2>Datos</h2>
+<div>
+    <img src="~/archivos/datos.jpg" width="400" height="300" style="float: right; margin-right: 10%"><br>
+</div>
+
+@using (Html.BeginForm("Datos", "Conversiones", FormMethod.Post))
+{
+
+    @Html.Label("Cantidad: ")
+    @Html.TextBoxFor(x => x.CampoTexto, new { @class = "form-control" })<br>
+
+    @Html.Label("Seleccione la Conversion que desea")<br>
+
+    <strong>De: </strong>
+
+    @Html.DropDownListFor(x => x.ConvesionesDatosFormaCorta1, new SelectList(new[] { "Bit", "Byte", "Kilobyte","Megabyte","Gigabyte",
+    "Terabyte" }), "Seleccionar la conversion", new { @class = "form-control"})<br>
+
+
+    <strong>A: </strong>
+    @Html.DropDownListFor(x => x.ConvesionesDatosFormaCorta2, new SelectList(new[] { "Bit", "Byte", "Kilobyte","Megabyte","Gigabyte",
+    "Terabyte" }), "Seleccionar la conversion", new { @class = "form-control"})<br>
+
+
+    <input type="submit" value="CALCULAR DATOS" class="btn btn-success">
+    <button formaction="~\Conversiones/Index" class="btn btn-primary">Volver</button><br>
+}
+
+
+@{
+    if (Model.CampoTexto != 0)
+    {
+        <script type="text/javascript">alert('@ViewBag.miResultado')</script>
+    }
+
+}
+
